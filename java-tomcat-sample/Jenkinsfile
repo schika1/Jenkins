@@ -12,7 +12,10 @@ pipeline {
                 }
             }
         }
-
-        
+        stage ('Deploy application to Staging enviroment') {
+            steps {
+                build job: ('Staging_Application')
+            }
+        }        
     }
 }
